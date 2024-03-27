@@ -1,6 +1,5 @@
 import './App.css'
-import dotenv from 'dotenv';
-dotenv.config();
+
 function App() {
   //const [count, setCount] = useState(0)
 
@@ -8,7 +7,7 @@ function App() {
     <main>
       <header>
         <h1>Spotify Blindtest</h1>
-        <a href={`https://accounts.spotify.com/authorize/?client_id=${Bun.env.CLIENT_ID}&redirect_uri=${Bun.env.REDIRECT_URI}&response_type=token`}>Login to Spotify</a>
+        <a href={`https://accounts.spotify.com/authorize/?client_id=${import.meta.env.VITE_CLIENT_ID}&redirect_uri=${import.meta.env.VITE_REDIRECT_URI}&response_type=token`}>Login to Spotify</a>
       </header>
     </main>
   )
